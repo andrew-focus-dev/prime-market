@@ -1,0 +1,20 @@
+.reviewed {
+  padding: 37px 0 84px;
+  background-image: url('../img/reviewed/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &-slider {
+    margin-top: 37px;
+  }
+
+  .product {
+    width: 382px;
+  }
+
+  #reviewed-slider {
+    overflow: visible;
+  }
+}
