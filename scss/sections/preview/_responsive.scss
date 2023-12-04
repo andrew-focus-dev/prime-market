@@ -42,6 +42,7 @@
 @media (max-width: 1220px) {
   .preview {
     &-services {
+      gap: 20px;
       grid-template-columns: 1fr 1fr;
     }
   }
