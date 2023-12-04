@@ -6,9 +6,6 @@
 
 @media (max-width: 1500px) {
   .preview {
-    &-slider {
-    }
-
     &-services {
       .service {
         &-title {
@@ -106,6 +103,12 @@
 @media (max-width: 950px) {
   .preview {
     margin-top: 301px;
+  }
+}
+
+@media (max-width: 850px) {
+  .preview .preview-wraper {
+    padding-top: 40px;
   }
 }
 
