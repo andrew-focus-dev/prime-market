@@ -4,6 +4,7 @@
 
   .container {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
   }
@@ -13,7 +14,7 @@
 
     img {
       width: 228px;
-      height: 80px;
+      height: auto;
     }
   }
 
@@ -26,5 +27,11 @@
     span {
       color: #35b8ff;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .prime .container {
+    grid-template-columns: 1fr;
   }
 }

@@ -54,12 +54,16 @@
 
   &-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr max-content;
     margin-top: auto;
   }
 
   &-basket {
     justify-self: end;
+
+    img {
+      display: block;
+    }
 
     &:hover {
       cursor: pointer;

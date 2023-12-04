@@ -35,10 +35,6 @@
 
 @media (max-width: 560px) {
   .categories {
-    .title {
-      font-size: 29px;
-    }
-
     &-list {
       grid-template-columns: 1fr;
     }

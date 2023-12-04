@@ -165,11 +165,13 @@
   }
 
   &-login {
-    width: 380px;
+    width: 95%;
+    max-width: 380px;
   }
 
   &-registration {
-    width: 719px;
+    width: 95%;
+    max-width: 719px;
   }
 
   &-btn {

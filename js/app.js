@@ -9,23 +9,37 @@ new Swiper('#preview-slider', {
     nextEl: '#preview-button-next',
     prevEl: '#preview-button-prev',
   },
+  autoplay: { delay: 2500 },
+  breakpoints: { 900: { autoplay: true } },
 })
 
 new Swiper('#reviewed-slider', {
   slidesPerView: 4,
   spaceBetween: 30,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    550: { slidesPerView: 2 },
+    700: { slidesPerView: 2, spaceBetween: 20 },
+    900: { slidesPerView: 3 },
+    1250: { slidesPerView: 4 },
+  },
 })
 
 const toggleNavbar = () => {
   const navbar = getElement.one('.navbar')
   const activeCls = 'navbar--small'
 
+  const toggle = clsMethod => navbar.classList[clsMethod](activeCls)
+
   const scroll = () => {
-    if (window.scrollY >= 225) {
-      navbar.classList.add(activeCls)
-    } else {
-      navbar.classList.remove(activeCls)
-    }
+    if (window.screen.width <= 900) return toggle('add')
+    if (window.scrollY >= 225) return toggle('add')
+
+    toggle('remove')
   }
 
   scroll()
@@ -45,7 +59,7 @@ const showElements = () => {
 
     btn.addEventListener('click', () => {
       if (!data.class) {
-        return (el.className = data.el)
+        return (el.className = data.mainClass)
       }
 
       el.classList[clsMethod](data.class)
