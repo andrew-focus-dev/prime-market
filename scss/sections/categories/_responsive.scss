@@ -27,6 +27,7 @@
 
 @media (max-width: 850px) {
   .categories {
+    padding-bottom: 60px;
     &-list {
       grid-template-columns: repeat(2, 1fr);
     }
