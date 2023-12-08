@@ -70,5 +70,24 @@ const showElements = () => {
   bntsClose.forEach(btn => toggle({ ...hide, btn }))
 }
 
+const toggleScrollUp = () => {
+  const fixed = getElement.one('[data-fixed]')
+  const scrollUp = getElement.one('[data-scrollup]')
+  const activeCls = 'fixed--scroll'
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 225) {
+      fixed.classList.add(activeCls)
+    } else {
+      fixed.classList.remove(activeCls)
+    }
+  })
+
+  scrollUp.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+}
+
 toggleNavbar()
+toggleScrollUp()
 showElements()
