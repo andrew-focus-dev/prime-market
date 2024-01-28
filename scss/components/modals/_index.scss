@@ -181,6 +181,9 @@
     border-radius: 10px;
     width: 100%;
     color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &.modals-btn--blue {
       background-color: #35b8ff;
