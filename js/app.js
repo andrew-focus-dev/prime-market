@@ -36,7 +36,7 @@ const toggleNavbar = () => {
   const toggle = clsMethod => navbar.classList[clsMethod](activeCls)
 
   const scroll = () => {
-    if (window.screen.width <= 900) return toggle('add')
+    if (window.innerWidth <= 980) return toggle('add')
     if (window.scrollY >= 225) return toggle('add')
 
     toggle('remove')
@@ -45,6 +45,7 @@ const toggleNavbar = () => {
   scroll()
 
   window.addEventListener('scroll', scroll)
+  window.addEventListener('resize', scroll)
 }
 
 const showElements = () => {
